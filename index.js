@@ -1,31 +1,16 @@
-//function section in Javascript and Jquery...
-function myData() {
-    retrun;
-  }
-  
-  function show() {
-    document.getElementById("anotherFunction").classList.toggle("Active");
-  }
-  
-  const icon = document.querySelector(".icon");
-  const links = document.querySelectorAll(".nav-type li");
-  
- 
- if (window.outerWidth<=800){
-  links.forEach(link => {
-    link.classList.toggle("remove");
+$(".navTrigger").click(function () {
+	$(this).toggleClass("active");
+	console.log("Clicked menu");
+	$("#mainListDiv").toggleClass("show_list");
+	$("#mainListDiv").fadeIn();
 });
 
- }
 
-
-
-icon.addEventListener('click', ()=>{
-  
-    
-    links.forEach(link => {
-        link.classList.toggle("remove");
-    });
-icon.classList.toggle("clicked");
-     
+$(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+      $('.nav').addClass('affix');
+      console.log("OK");
+  } else {
+      $('.nav').removeClass('affix');
+  }
 });
