@@ -1,265 +1,368 @@
-/*CSS page*/
-/*New Css Project*/
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* NAVBAR CSS STARTS HERE */
-
-.icon div{
-    width: 30px;
-    height:3px;
-    background: #ffffff;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-.icon{
-    display: none;
-}
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
 body {
-  /* margin: 0;
-
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 1;
-  overflow: scroll; */
-  background: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+    background-color: #111;
 }
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
 
-ul {
-  list-style-type: none;
-  display: flex;
-  padding: 18px 0;
-  background-size: 400% 400%;
-  background-image: linear-gradient(
-    -45deg,
-    #ff5959,
-    #ff4040,
-    #ff0d6e,
-    #ff8033,
-    #d74177
-  );
-  animation: 12s myGradient infinite;
-  box-shadow: 3px 3px 20px #ff3352;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  width: 100vw;
-  justify-content: space-around;
-    align-items: center;
-  height: 12vh;
-}
+/* Navbar section */
 
-@keyframes myGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.fa-search {
-  transition: 1s;
-  cursor: pointer;
-  margin-left: 30px;
-}
-
-.active {
-  transition: 1s;
-}
-
-.active1 {
-  transition: 1s;
-}
-
-.active2 {
-  transition: 1s;
-}
-
-.active3 {
-  transition: 1s;
-}
-
-li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 45px 45px;
-  font-family: verdana;
-  font-weight: lighter;
-  font-size: 18px;
-  letter-spacing: 1px;
-  opacity: 0.9;
-}
-.logo-container{
-  width: 50vw;
-  padding:1vh 1vw;
-  text-align: left;
-}
-.logo-img {
-  height: 3rem;
-  width: 3rem;
-}
-.navigation {
-  position: absolute;
-}
-
-.fa-search:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-}
-
-.active3:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-  margin-top: -100px;
-}
-
-.active2:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-}
-
-.active1:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-}
-
-.active:hover {
-  color: #fff;
-  animation: 1.5s myFlash linear infinite;
-  text-shadow: 2px 2px 30px #fff;
-  transition: 2s;
-}
-
-@keyframes myFlash {
-  0% {
-    opacity: 1;
-    text-shadow: transparent;
-  }
-
-  50% {
-    opacity: 0.1;
-  }
-
-  100% {
-    opacity: 1;
-    text-shadow: 2px 2px 20px #fff;
-  }
-}
-
-nav {
-  transition: 3s;
-  animation: 3s myAnimation ease linear;
-}
-
-@keyframes myAnimation {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.nav-type {
-  animation: 3s myWorld ease linear;
-}
-
-@keyframes myWorld {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 800px) {
-  .navigation {
+.nav {
     width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
     text-align: center;
-    transform: none;
-    top: 0%;
-    left: 0%;
-  }
-  ul {
-    flex-direction: column;
-    justify-content: space-around;
-    height: fit-content;
-  }
-  .line {
+    z-index: 1;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #00E676;
+}
+
+
+/* Home section */
+
+.navTrigger {
     display: none;
-  }
-  .icon{
-    display:block;
-    position: absolute;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .nav-container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
     cursor: pointer;
-    right: 5%;
-    top:45%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
-    transition: all 0.7s ease;
-}
-.remove{
-    display: none;
-}
-.clicked{
-  top: 25%;
-}
-.logo-container{
-  width: 90vw;
-}
-}
-/* NAVBAR CSS ENDS HERE */
-
-
-.home{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10vh;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
 }
 
-/* .About{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 80px;
-} */
-/* .About h1{
-  color: white;
-  font-size: 60px;
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
 }
-.About div{
-  color: white;
-  padding: 8vh 10vw;
-} */
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+
+
+
+
+
+.myH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+}
+
+
+
 
 #myVideo {
+  position:static;
   right: 0;
   bottom: 0;
-  width: 90%;
-  height: 100%;
+  width: 100%;
+height: auto;
 }
