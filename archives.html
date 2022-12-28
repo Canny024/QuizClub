@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon StlyeSheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="archives.css">
     <title>Archives</title>
 </head>
 <body>
+  <!-- Navbar Starts Here -->
+  <header>
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="#"><img src="./images/logo.png" alt="Logo" srcset="" /></a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+          <ul class="navlinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Archive</a></li>
+          </ul>
+        </div>
+        <span class="navTrigger">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </div>
+    </nav>
+  </header>
+  <!-- Navbar Ends Here -->
+
     <section class="mainDiv">
         <div><h1>Have a Glanse on our Archives</h1></div>
         <div class="container">
@@ -113,5 +144,56 @@
             </div>
           </div>
     </section>
+    <!-- Footer Starts here -->
+    <div class="line"></div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-left">
+            <img src="./images/logo.png" alt="Logo" srcset="" />
+            <h5>National Institute of Technology</h5>
+            <h5>Warangal, Telangana</h5>
+            <h6>Phone: +91 9381402059</h6>
+            <h7>Email: events@QuizClubnitw.com</h7>
+          </div>
+
+          <div class="footer-col">
+            <h4>Useful links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Archive</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow us</h4>
+            <div class="footer-social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="line"></div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        <h5>
+          © Copyright
+          <span class="footer-bottom-red footer-bottom-bold">QuizClub</span
+          ><span class="footer-bottom-bold">NITW</span> . All Rights Reserved
+        </h5>
+      </div>
+    </div>
+
+    <!-- Footer Ends Here -->
+
+       <!-- Navbar JQuery Script -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <!-- Linked Script -->
+       <script src="./archives.js"></script>
 </body>
 </html>
