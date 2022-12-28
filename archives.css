@@ -1,9 +1,14 @@
 .mainDiv{
-    text-align: center;
-    margin: 0 5rem
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 11rem 0rem;
 }
 .mainDiv h1{
     color: white;
+    text-shadow: 2px 2px #8f8f8f;
+    font-size: 5rem;
+    padding: 1rem 0rem;
 }
 
 /* card animation  */
@@ -378,19 +383,13 @@ body {
 }
 
 
-
-
-
-
-
-
+/* Archive CSS */
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 1200px;
   margin: 40px 0;
 }
 
@@ -526,11 +525,11 @@ ul {
   font-weight: 800;
 }
 .footer-bottom-red {
-  color: rgb(255, 128, 0);
+  color: #FF5F1F;
 }
 .footer-col {
   width: 25%;
-  padding: 0 15px;
+  padding: 7px 15px;
 }
 .footer-left {
   width: 50%;
@@ -547,6 +546,7 @@ ul {
   margin-bottom: 3px;
   font-weight: 500;
   position: relative;
+  text-shadow: 0.6px 0.6px rgb(255, 255, 255)
 }
 .footer-left h6 {
   font-size: 15px;
@@ -556,6 +556,7 @@ ul {
   font-weight: 400;
   position: relative;
   padding-top: 25px;
+  text-shadow: 0.6px 0.6px rgb(255, 255, 255)
 }
 .footer-left h7 {
   font-size: 15px;
@@ -564,6 +565,7 @@ ul {
   margin-bottom: 7px;
   font-weight: 400;
   position: relative;
+  text-shadow: 0.6px 0.6px rgb(255, 255, 255)
 }
 .footer-bottom-text h5 {
   font-size: 15px;
@@ -572,6 +574,7 @@ ul {
   margin-bottom: 7px;
   font-weight: 400;
   position: relative;
+ 
 }
 .footer-col h4 {
   font-size: 18px;
@@ -580,16 +583,7 @@ ul {
   margin-bottom: 35px;
   font-weight: 500;
   position: relative;
-}
-.footer-col h4::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #ffffff;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
+  text-shadow: 0.6px 0.6px rgb(255, 255, 255);
 }
 .footer-col ul li:not(:last-child) {
   margin-bottom: 15px;
@@ -605,8 +599,9 @@ ul {
 }
 .footer-col ul li a:hover {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 550;
   padding-left: 8px;
+  text-shadow: 0.6px 0.6px rgb(255, 255, 255)
 }
 .footer-col .footer-social-links a {
   display: inline-block;
@@ -622,9 +617,51 @@ ul {
 }
 .footer-col .footer-social-links a:hover {
   color: #ffffff;
-  background-color: #f56200;
+  
+}
+.footer-col .footer-social-links .fb:hover{
+  background-color:  #3b5998;
+}
+.footer-col .footer-social-links .twitter:hover{
+  background-color: #00acee;
+}
+.footer-col .footer-social-links .instagram:hover{
+  background-color: #D80971;
+}
+.footer-col .footer-social-links .linkedin:hover{
+  background-color: #0A66C2;
 }
 
+.underline{
+  width: 60px;
+  height: 2px;
+  background: white;
+  border-radius: 3px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  overflow: hidden;
+}
+
+.underline span{
+  width: 33%;
+  height: 4px;
+  background: #FF5F1F;
+  border-radius: 3px ;
+  position: absolute;
+  top: -0.5px;
+  left: 10px;
+  animation: moving 1.2s linear infinite;
+}
+
+@keyframes moving{
+  0%{
+    left: -20px;
+  }
+  100%{
+    left: 100%;
+  }
+}
 @media (max-width: 760px) {
   .footer-col {
     width: 100%;
