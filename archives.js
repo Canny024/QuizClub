@@ -18,3 +18,19 @@ $(window).scroll(function() {
       $('.navTrigger').removeClass('affix');
   }
 });
+
+//sound play
+let nodeList = document.querySelectorAll('.box');
+audios = document.querySelectorAll('audio');
+for (let i = 0; i < nodeList.length; i++) {
+  nodeList[i].addEventListener('mouseover', function() {
+  [].forEach.call(audios, function(audio) {
+    audio.play();
+  });
+  });
+  nodeList[i].addEventListener('mouseleave', function() {
+    heartbeat.pause();
+    heartbeat.currentTime = 0;
+  }, false);
+}
+

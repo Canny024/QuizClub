@@ -40,7 +40,7 @@ body {
 }
 /* NAVBAR CSS */
 .logo img {
-  width: 104px;
+  width: 68px;
   height: 68px;
 }
 
@@ -536,7 +536,7 @@ ul {
   padding: 0 30px;
 }
 .footer-left img {
-  width: 170px;
+  width: 120px;
   height: 120px;
 }
 .footer-left h5 {
@@ -598,10 +598,10 @@ ul {
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover {
-  color: #ffffff;
+  color: #e67700;
   font-weight: 550;
   padding-left: 8px;
-  text-shadow: 0.6px 0.6px rgb(255, 255, 255)
+  text-shadow: 0.6px 0.6px rgb(243, 93, 13)
 }
 .footer-col .footer-social-links a {
   display: inline-block;
