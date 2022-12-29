@@ -6,7 +6,7 @@
 }
 .mainDiv h1{
     color: white;
-    text-shadow: 2px 2px #8f8f8f;
+    text-shadow: 2px 2px #8f8f8f,0 5px 20px #0095ff,0 5px 10px #69befa;
     font-size: 5rem;
     padding: 1rem 0rem;
 }
@@ -39,6 +39,21 @@ body {
   background-color: rgb(8, 8, 8);
 }
 /* NAVBAR CSS */
+
+.scroll-indicator-container{
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  top: 6.5rem;
+}
+
+.scroll-indicator-bar{
+  background:linear-gradient(to right, #EC9F05 0%, #FF4E00 100%);
+  width: 0%;
+  height: 100%;
+  box-shadow: 0 5px 25px #199fff,
+              0 5px 50px #199fff;
+}
 .logo img {
   width: 68px;
   height: 68px;
@@ -95,14 +110,17 @@ body {
   text-decoration: none;
   color: #fff;
   line-height: 65px;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
+  font-weight: 500;
 }
 
 .nav div.main_list ul li a:hover {
-  color: #e67700;
+  color: #ff6c04;
+  font-weight: 600;
+  text-shadow: 0 5px 25px #f3b77b68,
+  0 5px 20px #f6a4788a;;
+  
 }
-
-/* Home section */
 
 .navTrigger {
   display: none;
@@ -126,6 +144,7 @@ body {
     display: block;
   }
   .nav div.logo {
+    position: absolute;
     float: left;
     width: auto;
     height: auto;
@@ -143,13 +162,15 @@ body {
   .nav div.main_list ul {
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 47vh;
     right: 0;
-    left: 0;
+    left: 0rem;
+    top: 6rem;
     bottom: 0;
+    z-index: 100;
     background-color: #111;
-    /*same background color of navbar*/
     background-position: center top;
+    position: relative;
   }
   .nav div.main_list ul li {
     width: 100%;
@@ -672,4 +693,69 @@ ul {
     margin-bottom: 30px;
     padding-left: 15px;
   }
+}
+
+
+/* Back To Top */
+#rocketmeluncur {
+  position: fixed;
+  bottom: 50px;
+  z-index: 7;
+  display: none;
+  visibility: hidden;
+  width: 26px;
+  height: 48px;
+  right: 25px;
+  background: url(https://3.bp.blogspot.com/-GZOBULN1Q4s/VbNxQrf37EI/AAAAAAAAAPk/rak337seJ70/s1600/Ask.png) no-repeat 50% 0;
+  opacity: 0;
+  -webkit-transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  -moz-transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+#rocketmeluncur i {
+  display: block;
+  margin-top: 48px;
+  height: 14px;
+  background: url(https://1.bp.blogspot.com/-UR9I7YEuEUY/VXIJn8MrBPI/AAAAAAAAKRE/qZObHBd5zIo/s1600/rocket.png) no-repeat 50% -48px;
+  opacity: .5;
+  -webkit-transition: -webkit-transform .2s;
+  -moz-transition: -moz-transform .2s;
+  transition: transform .2s;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0
+}
+
+#rocketmeluncur:hover {
+  background-position: 50% -62px
+}
+
+#rocketmeluncur:hover i {
+  background-position: 50% 100%;
+  -webkit-animation: flaming .7s infinite;
+  -moz-animation: flaming .7s infinite;
+  animation: flaming .7s infinite
+}
+
+#rocketmeluncur.showrocket {
+  visibility: visible;
+  opacity: 1
+}
+
+#rocketmeluncur.launchrocket {
+  background-position: 50% -62px;
+  opacity: 0;
+  -webkit-transform: translateY(-800px);
+  -moz-transform: translateY(-800px);
+  -ms-transform: translateY(-800px);
+  transform: translateY(-800px);
+  pointer-events: none
+}
+
+#rocketmeluncur.launchrocket i {
+  background-position: 50% 100%;
+  -webkit-transform: scale(1.4, 3.2);
+  -moz-transform: scale(1.4, 3.2);
+  transform: scale(1.4, 3.2)
 }
